@@ -57,7 +57,7 @@
 [Step 4] Initializing Weights... Random (-1.0 to 1.0)
 [Step 5] Sigmoid Activation... Operational!
 
-
+```
 ---
 
 ## 🗺️ Development Roadmap to v1.0.0
