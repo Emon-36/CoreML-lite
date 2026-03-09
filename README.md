@@ -1,4 +1,4 @@
-# 🚀 CoreML-lite: High-Performance C++ Neural Engine
+#  CoreML-lite: High-Performance C++ Neural Engine
 
 <p align="center">
   <img src="https://img.shields.io/badge/C%2B%2B-11%2F14%2F17-blue.svg?style=for-the-badge&logo=c%2B%2B" />
