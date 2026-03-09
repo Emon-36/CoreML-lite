@@ -115,7 +115,7 @@ Whether you are an **Electrical Engineer** or a **Software Developer**, your con
 *University of Chittagong*
 
 <p align="left">
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">
+  <a href="https://linkedin.com/in/md-shahariar-khan-emon-8758a3327" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:emon23702036@gmail.com">
