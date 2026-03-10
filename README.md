@@ -1,4 +1,4 @@
-# 🚀 CoreML-lite: High-Performance C++ Neural Engine
+#  CoreML-lite: High-Performance C++ Neural Engine
 
 <p align="center">
   <img src="https://img.shields.io/badge/C%2B%2B-11%2F14%2F17-blue.svg?style=for-the-badge&logo=c%2B%2B" />
@@ -57,7 +57,7 @@
 [Step 4] Initializing Weights... Random (-1.0 to 1.0)
 [Step 5] Sigmoid Activation... Operational!
 
-
+```
 ---
 
 ## 🗺️ Development Roadmap to v1.0.0
@@ -115,10 +115,10 @@ Whether you are an **Electrical Engineer** or a **Software Developer**, your con
 *University of Chittagong*
 
 <p align="left">
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">
+  <a href="https://linkedin.com/in/md-shahariar-khan-emon-8758a3327" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:YOUR_EMAIL@gmail.com">
+  <a href="mailto:emon23702036@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
 </p>
