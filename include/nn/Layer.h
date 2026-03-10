@@ -33,7 +33,12 @@ namespace Emo {
             return output;
         }
 
-        
+        void summary() const {
+            std::cout << "Layer Summary [Dense] | Activation: " << activation << std::endl;
+            std::cout << "Weights Shape: (" << weights.getRows() << "x" << weights.getCols() << ")" << std::endl;
+            std::cout << "Bias Shape: (" << bias.getRows() << "x" << bias.getCols() << ")" << std::endl;
+            std::cout << "------------------------------------" << std::endl;
+        }
        
     };
     
