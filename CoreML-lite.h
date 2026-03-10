@@ -4,6 +4,6 @@
 #include "linalg/Matrix.h"
 #include "processing/DataFrame.h"
 
-// #include "nn/Layers.h"
+#include "nn/Layer.h"
 
 #endif // COREML_LITE_H
