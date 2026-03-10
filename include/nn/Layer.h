@@ -26,10 +26,7 @@ namespace Emo {
                 output.relu();
             } else if (activation == "sigmoid") {
                 output.sigmoid();
-            } else if (activation == "sigmoid") {
-                output.sigmoid();
             }
-
             return output;
         }
 
