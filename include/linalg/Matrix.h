@@ -12,7 +12,9 @@ namespace Emo
      public:
      int rows, cols;
      std::vector<float> data;
-
+     int getRows() const { return rows; }
+     int getCols() const { return cols; }
+     
         Matrix(int r, int c) : rows(r), cols(c), data(r * c, 0.0f) {
             data.resize(rows * cols);
         };
