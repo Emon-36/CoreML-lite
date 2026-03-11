@@ -1,46 +1,34 @@
 #include <iostream>
-#include "CoreML-lite.h" // আপনার মাস্টার হেডার
+#include "CoreML-lite.h"
 
 int main() {
-    try {
-        std::cout << "=== CoreML-lite 50% Milestone Test ===" << std::endl;
+    std::cout << "--- CoreML-lite: Deep Neural Network Test ---" << std::endl;
 
-        // ধাপ ১: EmoPandas দিয়ে ডাটা লোড করা
-        Emo::DataFrame df;
-        std::cout << "\n[Step 1] Loading CSV Data..." << std::endl;
-        df.read_csv("../sensor_data.csv"); // আপনার ফাইল পাথ চেক করুন
-        
-        std::cout << "Original Data (First 3 rows):" << std::endl;
-        df.head(3);
+    // ১. একটি Sequential মডেল তৈরি (The Brain Cabinet)
+    Emo::Sequential model;
 
-        // ধাপ ২: Data Normalization (০ থেকে ১ এর মধ্যে আনা)
-        std::cout << "\n[Step 2] Normalizing 'voltage' column..." << std::endl;
-        df.normalize("voltage");
-        
-        std::cout << "Normalized Data (First 3 rows):" << std::endl;
-        df.head(3);
+    // ২. লেয়ার যোগ করা (Stacking the Layers)
+    // Input(3) -> Hidden1(8) -> Hidden2(4) -> Output(1)
+    model.addLayer(new Emo::DenseLayer(3, 8, "relu"));
+    model.addLayer(new Emo::DenseLayer(8, 4, "relu"));
+    model.addLayer(new Emo::DenseLayer(4, 1, "sigmoid")); // আউটপুট হবে ০ থেকে ১ এর মধ্যে
 
-        // ধাপ ৩: কলাম থেকে Matrix এ রূপান্তর
-        std::cout << "\n[Step 3] Converting normalized voltage to Matrix..." << std::endl;
-        Emo::Matrix v_mat = df.to_matrix("voltage");
-        v_mat.print();
+    // ৩. মডেলের সামারি দেখা
+    model.summary();
 
-        // ধাপ ৪: Weight Initialization (র‍্যান্ডম ওয়েট তৈরি)
-        std::cout << "\n[Step 4] Creating a 3x1 Weight Matrix with Random Values..." << std::endl;
-        Emo::Matrix weights(3, 1);
-        weights.fillRandom(-1.0f, 1.0f); // -১ থেকে ১ এর মধ্যে র‍্যান্ডম ভ্যালু
-        weights.print();
+    // ৪. ইনপুট সিগন্যাল (যেমন: ৩টি সেন্সর ডাটা)
+    Emo::Matrix input(3, 1);
+    input.fillNormal(0.5f, 0.2f); // আপনার তৈরি করা বেল কার্ভ ফাংশন
 
-        // ধাপ ৫: Activation Function Test (Sigmoid)
-        std::cout << "\n[Step 5] Testing Sigmoid Activation on Weights..." << std::endl;
-        weights.sigmoid(); // আপনার লেখা সিগময়েড ফাংশন
-        weights.print();
+    std::cout << "\n[Input Sensors]:" << std::endl;
+    input.print();
 
-        std::cout << "\n[SUCCESS] All systems are operational! Ready for Repo Upload." << std::endl;
+    // ৫. প্রসেসিং (Forward Pass through all layers)
+    Emo::Matrix prediction = model.predict(input);
 
-    } catch (const std::exception& e) {
-        std::cerr << "Test Failed! Error: " << e.what() << std::endl;
-    }
+    // ৬. ফাইনাল রেজাল্ট
+    std::cout << "\n[Final Brain Prediction (0 to 1)]:" << std::endl;
+    prediction.print();
 
     return 0;
 }

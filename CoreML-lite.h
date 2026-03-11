@@ -5,5 +5,5 @@
 #include "processing/DataFrame.h"
 
 #include "nn/Layer.h"
-
+#include "nn/Sequential.h"
 #endif // COREML_LITE_H

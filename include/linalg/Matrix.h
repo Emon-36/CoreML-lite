@@ -107,6 +107,16 @@ namespace Emo
            }
         }
 
+        void fillNormal(float mean = 0.0f, float std_dev = 1.0f) {
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::normal_distribution<float> dis(mean, std_dev);
+
+            for (float& val : data) {
+                val = dis(gen);
+            }
+        }
+
 
     };
     
